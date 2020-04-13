@@ -32,6 +32,7 @@ export class ProfileComponent implements OnInit {
   profile: any;
   @ViewChild('myPieChart') myPieChart!: ElementRef<HTMLCanvasElement>;
   chart!: Chart;
+  isLoading: boolean = false;
   // --- line chart ---
   constructor(private dataService: DataService,
               private route: ActivatedRoute) {
@@ -39,13 +40,17 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.route.params.subscribe( params => {
       this.dataService.getProfile(params.handle).subscribe((profile) => {
+        this.isLoading = false;
+        this.message = '';
         console.log(profile);
         this.profile = profile['user'];
         this.generateRanksGraph();
       },
       (err) => {
+        this.isLoading = false;
         this.message = 'Error: ' + err.error.message;
         console.log(err.error.message);
         this.isUserExists = true;

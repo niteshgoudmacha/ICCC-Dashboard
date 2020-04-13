@@ -53,6 +53,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { DataService } from './data.service';
+import { FooterComponent } from './footer/footer.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 //
 
 @NgModule({
@@ -61,7 +63,9 @@ import { DataService } from './data.service';
     DashboardComponent,
     AdminComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

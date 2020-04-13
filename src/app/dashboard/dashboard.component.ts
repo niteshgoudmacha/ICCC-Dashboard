@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   dataSource: MatTableDataSource<UserData>;
   users;
   isLoading: boolean = false;
+  message: string;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   constructor(private route: ActivatedRoute,
@@ -34,7 +35,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true;
     this.dataService.getUsers().subscribe(users => {
+      // setTimeout(() => this.isLoading = false, 4000);
       this.isLoading = false;
+      this.message = '';
       this.users = users;
       console.log(users);
       const ds = [];
@@ -58,6 +61,8 @@ export class DashboardComponent implements OnInit {
     },
     (err) => {
       console.log(err);
+      this.isLoading = false;
+      this.message = 'Error : ' + err.error.message;
     });
   }
 
