@@ -1,0 +1,67 @@
+
+
+<!-- <input type="file" (change)="onFileChange($event)" />
+
+<div id="output"></div>
+<br>
+<div *ngIf="willDownload">
+	<a id="download"> Download JSON File </a>
+</div> 
+-->
+
+
+<div class="container">
+    <div class="card bg-secondary" style="width: 90%; padding: 10%; margin: 10%;">
+        <h2 class="card-title">Upload Contest Data</h2>
+        <form style="width: 100%;">
+            <div class="form-group">
+                <label>Contest Name</label>
+                <input type="text" class="form-control" [(ngModel)]="contestName" [ngModelOptions]="{standalone: true}" placeholder="Enter Contest Name">                
+            </div>
+            <div class="form-group">
+                <label>Test link</label>
+                <input type="text" class="form-control" [(ngModel)]="testLink" [ngModelOptions]="{standalone: true}" placeholder="Enter Contest Link">                
+            </div>
+            <div class="form-group">
+                <label>Problem 1</label>
+                <input type="text" class="form-control" [(ngModel)]="problemsList[0].name" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Name"><br>
+                <input type="number" class="form-control" [(ngModel)]="problemsList[0].score" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Score">             
+            </div>
+            <div class="form-group">
+                <label>Problem 2</label>
+                <input type="text" class="form-control" [(ngModel)]="problemsList[1].name" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Name"><br>
+                <input type="number" class="form-control" [(ngModel)]="problemsList[1].score" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Score">             
+            </div>
+            <div class="form-group">
+                <label>Problem 3</label>
+                <input type="text" class="form-control" [(ngModel)]="problemsList[2].name" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Name"><br>
+                <input type="number" class="form-control" [(ngModel)]="problemsList[2].score" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Score">  
+            </div>
+            
+            <div class="form-group">
+                <label>Problem 4</label>
+                <input type="text" class="form-control" [(ngModel)]="problemsList[3].name" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Name"><br>
+                <input type="number" class="form-control" [(ngModel)]="problemsList[3].score" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Score">  
+            </div>
+            
+            <div class="form-group">
+                <label>Problem 5</label>
+                <input type="text" class="form-control" [(ngModel)]="problemsList[4].name" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Name"><br>
+                <input type="number" class="form-control" [(ngModel)]="problemsList[4].score" [ngModelOptions]="{standalone: true}" placeholder="Enter problem Score">  
+            </div>
+            <div class="form-group">
+                <label>Contest Rank List</label>
+                <input type="file" (change)="onFileChange($event)"/>
+            </div>
+
+           
+            <button type="submit" class="btn btn-primary m-2" (click)="upload()">Upload</button>
+            <!-- <div *ngIf="isLoading" style="text-align: center;">
+                <app-loading-spinner></app-loading-spinner>
+            </div> -->
+            <div style="text-align: center;">
+                {{successMessage}}
+            </div>
+        </form>
+    </div>
+</div>

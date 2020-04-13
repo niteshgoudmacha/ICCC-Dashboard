@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a href="/" class="navbar-brand">
+        <!-- <img src="assests/icons/icon-72x72.png" width="30" height="30"
+            class="d-inline-block align-top" alt="absd"> -->
+            Dashboard
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="/" class="nav-item nav-link active">Home</a>
+            <!-- <a href="/about" class="nav-item nav-link">About</a> -->
+            <a href="/dashboard" class="nav-item nav-link">Dashboard</a>
+            <!-- <a href="/leaderboard" class="nav-item nav-link">Leaderboard</a> -->
+        </div>
+        <!-- <form class="form-inline m-auto">
+            <input type="text" class="form-control mr-sm-1" placeholder="Goto: Home" [(ngModel)]="navSearch" [ngModelOptions]="{standalone: true}">
+            <div *ngIf="isListening" style="text-align: center;">
+                <app-listening-spinner></app-listening-spinner>
+            </div>
+            <button type="submit" class="btn btn-outline-light m-1" (click)="activateSpeechSearch()">Search</button>
+        </form> -->
+        <!-- <ul class="nav-item dropdown mr-3 ml-auto mt-auto mb-auto">
+            <i class="dropdown-toggle fas fa-user-circle m-1" style='font-size:32px;color:rgb(0, 60, 255)'  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </i>&nbsp;&nbsp;&nbsp;
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item fa fa-sign-in" href="/login" *ngIf="!isAuth()">Login</a>
+                <a class="dropdown-item" href="/register" *ngIf="!isAuth()">Register</a>
+                <a class="dropdown-item" href="/profile" *ngIf="isAuth()">Profile</a>
+                <a class="dropdown-item fa fa-sign-out" href="" *ngIf="isAuth()" (click)="logout()">&nbsp;&nbsp;Logout</a>
+            </div>
+        </ul> -->
+        <!-- <div class="mr-3 ml-auto mt-auto mb-auto">
+            <div>
+                <a class="btn btn-success fa fa-sign-in mr-2" href="/login" *ngIf="!isAuth()">&nbsp;&nbsp;Login</a>
+                <a class="btn btn-primary fa fa-sign-up" href="/register" *ngIf="!isAuth()">Register</a>
+            </div>
+            <div class="btn-group open" *ngIf="isAuth()">
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw"></i> User</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item fa fa-user fa-fw" href="/profile" *ngIf="isAuth()">>&nbsp;&nbsp;Profile</a></li>
+                <li><a class="dropdown-item fa fa-sign-out" href="" *ngIf="isAuth()" (click)="logout()">&nbsp;&nbsp;Logout</a></li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    
+</nav>

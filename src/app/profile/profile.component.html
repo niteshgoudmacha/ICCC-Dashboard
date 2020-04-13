@@ -1,0 +1,62 @@
+<div class="container">
+    
+    <h1>Inter College Coding Contests (ICCC)</h1>
+    <hr>
+    <div class="container mt-2 mb-2">
+        <h1>{{message}}</h1>
+    </div>
+    <div class="container form-inline mt-2 mb-2">
+        <img src="https://he-s3.s3.amazonaws.com/static/base/images/gravatar.png" alt="avatar" style="height: 30px; width: 30px;" />
+        <h3 class="ml-2">{{ profile.fullName }}</h3>
+    </div>
+    <div class="container mt-2 mb-2">
+        <div class="card">
+            <div class="card-header">
+              About
+            </div>
+            <div class="card-body">
+                <span>Email : {{profile.email}}</span><br>
+                <span>HackerEarth Profile : <a href="{{profile.profileUrl}}">Link</a></span>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+    </div>
+    <div class="container mt-2 mb-2 row">
+        <div class="col-lg-6">
+            <div class="container m-3 p-3 bg-light" style="position: relative;">   
+                <canvas id="score">
+                    {{ ScoreLinechart }}
+                </canvas> 
+            </div>
+        </div>
+        <div class="col-lg-6" >
+            <div class="container m-3 p-3 bg-light" style="position: relative;"> 
+                <canvas id="noOfProblemsSolved">
+                    {{ NoOfProblemsSolvedLinechart }}
+                </canvas>    
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 mb-2 row">
+        <div class="col-lg-6">
+            <div class="container m-3 p-3 bg-light" style="position: relative;">    
+                <canvas id="percentage">{{ PercentageLinechart }}</canvas>    
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="container m-3 p-3 bg-light" style="position: relative;">   
+                <canvas #myPieChart></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <canvas id="pieChart">{{ PieChart }}</canvas>   -->
+    <!-- <div class="container mt-2 mb-2 row">
+        <div class="col-lg-6">
+            <div class="container m-3 p-3 bg-light" style="position: relative;">    
+                <canvas id="piechart">{{ PieChart }}</canvas>    
+            </div>
+        </div>
+    </div> -->
+    
+</div>
