@@ -62,7 +62,7 @@ export class DashboardComponent implements OnInit {
     (err) => {
       console.log(err);
       this.isLoading = false;
-      this.message = 'Error : ' + err.error.message;
+      this.message = 'Error :  + err.error.message;
     });
   }
 
