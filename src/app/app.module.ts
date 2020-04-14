@@ -11,6 +11,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
 // angular material
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
@@ -55,6 +56,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import { DataService } from './data.service';
 import { FooterComponent } from './footer/footer.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { MattableComponent } from './mattable/mattable.component';
 //
 
 @NgModule({
@@ -65,13 +67,15 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     ProfileComponent,
     NavComponent,
     FooterComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    MattableComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     HttpClientModule,
     A11yModule,

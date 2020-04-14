@@ -26,6 +26,7 @@ export class AdminComponent implements OnInit {
   contestName: string;
   problemsList: any;
   testLink: string;
+  isLoading: boolean = true;
   ngOnInit(): void {}
 
   constructor(private dataService: DataService) {
@@ -134,9 +135,14 @@ export class AdminComponent implements OnInit {
 
 
   upload() {
+    this.isLoading = true;
     this.dataService.uploadData(this.dataString).subscribe((res) => {
+      this.isLoading = false;
+      this.successMessage = 'Updated Successfully';
       console.log(res);
     }, (err) => {
+      this.isLoading = false;
+      this.successMessage = err.error.message;
       console.log(err);
     });
   }

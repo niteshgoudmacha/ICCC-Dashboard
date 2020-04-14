@@ -101,27 +101,31 @@ export class ProfileComponent implements OnInit {
                   },
               ],
           },
-        });
-
-        this.PieChart = new Chart('pieChart', {
-          type: 'pie',
-          data: {
-            labels: [
-              'Completely Solved',
-              'Partially Solved',
-              'UnSolved'
-            ],
-            dataSets: [
-              {
-                data: [10, 20, 30],
-                borderColor: '#3cba9f',
-                // label: 'Points',
-                backgroundColor: ['#e67e22', '#16a085', '#2980b9'],
-                fill: true
-              }
-           ]
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
           }
         });
+
+        // this.PieChart = new Chart('pieChart', {
+        //   type: 'pie',
+        //   data: {
+        //     labels: [
+        //       'Completely Solved',
+        //       'Partially Solved',
+        //       'UnSolved'
+        //     ],
+        //     dataSets: [
+        //       {
+        //         data: [10, 20, 30],
+        //         borderColor: '#3cba9f',
+        //         // label: 'Points',
+        //         backgroundColor: ['#e67e22', '#16a085', '#2980b9'],
+        //         fill: true
+        //       }
+        //    ]
+        //   }
+        // });
       }, 500);
 
       this.ScoreLinechart = new Chart('score', {
@@ -137,6 +141,8 @@ export class ProfileComponent implements OnInit {
           ]
         },
         options: {
+          maintainAspectRatio: false,
+          responsive: true,
           title: {
             display: true,
             text: 'Score Of Each Contest'
@@ -185,6 +191,8 @@ export class ProfileComponent implements OnInit {
           ]
         },
         options: {
+          maintainAspectRatio: false,
+          responsive: true,
           title: {
             display: true,
             text: 'Percentage Of Each Contest'
@@ -233,9 +241,11 @@ export class ProfileComponent implements OnInit {
           ]
         },
         options: {
+          maintainAspectRatio: false,
+          responsive: true,
           title: {
             display: true,
-            text: 'No Of Problems Solved In Each Contest'
+            text: 'Problems Solved In Each Contest'
           },
           legend: {
             display: false

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-3">
     
     <h1>Inter College Coding Contests (ICCC)</h1>
     <hr>
@@ -9,8 +9,8 @@
         <h1>{{message}}</h1>
     </div>
     <div class="container form-inline mt-2 mb-2">
-        <img src="https://he-s3.s3.amazonaws.com/static/base/images/gravatar.png" alt="avatar" style="height: 30px; width: 30px;" />
-        <h3 class="ml-2">{{ profile.fullName }}</h3>
+        <img src="https://he-s3.s3.amazonaws.com/static/base/images/gravatar.png" alt="avatar" style="height: 30px; width: 30px; margin-right: 5px;" />
+        <h3 style="margin-top: 6px;">{{ profile.fullName }}</h3>
     </div>
     <div class="container mt-2 mb-2">
         <div class="card">
@@ -24,30 +24,30 @@
             </div>
           </div>
     </div>
-    <div class="container mt-2 mb-2 row">
+    <div class="fluid-container mt-2 mb-2 row">
         <div class="col-lg-6">
-            <div class="container m-3 p-3 bg-light" style="position: relative;">   
+            <div class="graph-container m-2 p-1 bg-light">   
                 <canvas id="score">
                     {{ ScoreLinechart }}
                 </canvas> 
             </div>
         </div>
         <div class="col-lg-6" >
-            <div class="container m-3 p-3 bg-light" style="position: relative;"> 
+            <div class="graph-container m-2 p-1 bg-light"> 
                 <canvas id="noOfProblemsSolved">
                     {{ NoOfProblemsSolvedLinechart }}
                 </canvas>    
             </div>
         </div>
     </div>
-    <div class="container mt-2 mb-2 row">
+    <div class="fluid-container mt-2 mb-2 row">
         <div class="col-lg-6">
-            <div class="container m-3 p-3 bg-light" style="position: relative;">    
+            <div class="graph-container m-2 p-1 bg-light">    
                 <canvas id="percentage">{{ PercentageLinechart }}</canvas>    
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="container m-3 p-3 bg-light" style="position: relative;">   
+            <div class="graph-container m-2 p-1 bg-light">   
                 <canvas #myPieChart></canvas>
             </div>
         </div>

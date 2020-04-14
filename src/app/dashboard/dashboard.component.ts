@@ -18,6 +18,12 @@ export interface UserData {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  options = {
+    timeOut: 3000,
+    showProgressBar: true,
+    pauseOnHover: true,
+    clickToClose: true
+  };
   handle: any;
   displayedColumns: string[] = ['Name', 'Hackerearth_Handle', 'Profile_Link'];
   dataSource: MatTableDataSource<UserData>;
